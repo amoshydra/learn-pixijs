@@ -1,0 +1,26 @@
+{
+  "name": "learn-pixi-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify src/main.js -t [ babelify --presets [ es2015 ] ] -o dist/bundle.js",
+    "dev": "concurrently \"watchify src/main.js -t [ babelify --presets [ es2015 ] ] -o dist/bundle.js -v\" \"live-server --ignore=\"node_modules\"\""
+  },
+  "author": "amoshydra",
+  "license": "ISC",
+  "dependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "pixi.js": "^4.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "live-server": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}
